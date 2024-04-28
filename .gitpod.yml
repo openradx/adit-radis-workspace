@@ -1,0 +1,47 @@
+image:
+  file: .gitpod.Dockerfile
+
+additionalRepositories:
+  - url: https://github.com/openradx/adit-radis-shared
+  - url: https://github.com/openradx/adit
+  - url: https://github.com/openradx/radis
+  - url: https://github.com/openradx/adit-client
+  - url: https://github.com/openradx/radis-client
+
+workspaceLocation: adit-radis-workspace/main.code-workspace
+
+tasks:
+  - name: adit-radis-shared
+    before: |
+      cd ../adit-radis-shared
+    init: |
+      poetry install
+      npm install
+      poetry run invoke init-workspace
+
+  - name: adit
+    before: |
+      cd ../adit
+    init: |
+      poetry install
+      poetry run invoke init-workspace
+
+  - name: radis
+    before: |
+      cd ../radis
+    init: |
+      poetry install
+      poetry run invoke init-workspace
+      poetry run invoke download-llm -m mistral-7b-q2
+
+  - name: adit-client
+    before: |
+      cd ../adit-client
+    init: |
+      poetry install
+
+  - name: radis-client
+    before: |
+      cd ../radis-client
+    init: |
+      poetry install
