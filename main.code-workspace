@@ -20,5 +20,8 @@
     {
       "path": "../radis-client"
     }
-  ]
+  ],
+  "settings": {
+    "ruff.interpreter": ["/workspace/adit-radis-shared/.venv/bin/python"]
+  }
 }
