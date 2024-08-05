@@ -18,6 +18,8 @@ tasks:
       poetry install
       npm install
       poetry run invoke init-workspace
+    command: |
+      poetry shell
 
   - name: adit
     before: |
@@ -25,6 +27,8 @@ tasks:
     init: |
       poetry install
       poetry run invoke init-workspace
+    command: |
+      poetry shell
 
   - name: radis
     before: |
@@ -32,19 +36,24 @@ tasks:
     init: |
       poetry install
       poetry run invoke init-workspace
-      poetry run invoke download-llm -m mistral-7b-q2
+    command: |
+      poetry shell
 
   - name: adit-client
     before: |
       cd ../adit-client
     init: |
       poetry install
+    command: |
+      poetry shell
 
   - name: radis-client
     before: |
       cd ../radis-client
     init: |
       poetry install
+    command: |
+      poetry shell
 
 vscode:
   extensions:
