@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "adit-radis-workspace"
-version = "0.1.0"
+version = "0.0.0"
 description = ""
 authors = ["Kai Schlamp <kai.schlamp@gmail.com>"]
 readme = "README.md"
