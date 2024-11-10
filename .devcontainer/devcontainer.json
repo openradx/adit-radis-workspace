@@ -38,7 +38,8 @@
         "streetsidesoftware.code-spell-checker",
         "tamasfe.even-better-toml",
         "wayou.vscode-todo-highlight",
-        "xabikos.javascriptsnippets"
+        "xabikos.javascriptsnippets",
+        "zoma.vscode-auto-open-workspace"
       ]
     },
     "codespaces": {
