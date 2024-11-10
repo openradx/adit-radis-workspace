@@ -31,5 +31,6 @@ poetry install
 cd ../radis-client
 poetry install
 
-# Return to workspace root
+# Return to and setup adit-radis-workspace
 cd ../adit-radis-workspace
+poetry install
