@@ -1,14 +1,19 @@
 #!/bin/bash
 
+# The workspaces is by default owned by root.
+# We have to change this to clone additional repositories into /workspaces.
+cd /workspaces
+sudo chown vscode:vscode .
+
 # Clone additional repositories
-git clone https://github.com/openradx/adit-radis-shared ../adit-radis-shared
-git clone https://github.com/openradx/adit ../adit
-git clone https://github.com/openradx/radis ../radis
-git clone https://github.com/openradx/adit-client ../adit-client
-git clone https://github.com/openradx/radis-client ../radis-client
+git clone https://github.com/openradx/adit-radis-shared adit-radis-shared
+git clone https://github.com/openradx/adit adit
+git clone https://github.com/openradx/radis radis
+git clone https://github.com/openradx/adit-client adit-client
+git clone https://github.com/openradx/radis-client radis-client
 
 # Setup adit-radis-shared
-cd ../adit-radis-shared
+cd adit-radis-shared
 poetry install
 npm install
 poetry run invoke init-workspace

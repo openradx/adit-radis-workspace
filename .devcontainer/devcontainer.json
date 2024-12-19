@@ -14,9 +14,6 @@
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "remoteUser": "vscode",
   "workspaceFolder": "/workspaces/adit-radis-workspace",
-  "mounts": [
-    "source=${localWorkspaceFolder},target=/workspaces/adit-radis-workspace,type=bind,consistency=cached"
-  ],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -51,4 +48,3 @@
     }
   }
 }
-  
