@@ -2,40 +2,39 @@
 
 # The workspaces is by default owned by root.
 # We have to change this to clone additional repositories into /workspaces.
-cd /workspaces
-sudo chown vscode:vscode .
+sudo chown vscode:vscode /workspaces
 
 # Clone additional repositories
-git clone https://github.com/openradx/adit-radis-shared adit-radis-shared
-git clone https://github.com/openradx/adit adit
-git clone https://github.com/openradx/radis radis
-git clone https://github.com/openradx/adit-client adit-client
-git clone https://github.com/openradx/radis-client radis-client
+git clone https://github.com/openradx/adit-radis-shared /workspaces/adit-radis-shared
+git clone https://github.com/openradx/adit /workspaces/adit
+git clone https://github.com/openradx/radis /workspaces/radis
+git clone https://github.com/openradx/adit-client /workspaces/adit-client
+git clone https://github.com/openradx/radis-client /workspaces/radis-client
 
 # Setup adit-radis-shared
-cd adit-radis-shared
+cd /workspaces/adit-radis-shared
 poetry install
 npm install
 poetry run invoke init-workspace
 
 # Setup adit
-cd ../adit
+cd /workspaces/adit
 poetry install
 poetry run invoke init-workspace
 
 # Setup radis
-cd ../radis
+cd /workspaces/radis
 poetry install
 poetry run invoke init-workspace
 
 # Setup adit-client
-cd ../adit-client
+cd /workspaces/adit-client
 poetry install
 
 # Setup radis-client
-cd ../radis-client
+cd /workspaces/radis-client
 poetry install
 
 # Return to and setup adit-radis-workspace
-cd ../adit-radis-workspace
+cd /workspaces/adit-radis-workspace
 poetry install

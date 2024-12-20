@@ -9,14 +9,6 @@ package-mode = false
 [tool.poetry.dependencies]
 python = ">=3.12,<4.0"
 
-[tool.poetry.group.dev.dependencies]
-djlint = "^1.19.16"
-
-[tool.djlint]
-profile = "django"
-max_line_length = 120
-ignore = "H021,H030,H031,T002"
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

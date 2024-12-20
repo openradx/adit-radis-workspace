@@ -4,27 +4,27 @@
   "folders": [
     {
       "name": "ADIT RADIS Workspace",
-      "path": "."
+      "path": "/workspaces/adit-radis-workspace"
     },
     {
       "name": "ADIT RADIS Shared",
-      "path": "../adit-radis-shared"
+      "path": "/workspaces/adit-radis-shared"
     },
     {
       "name": "ADIT",
-      "path": "../adit"
+      "path": "/workspaces/adit"
     },
     {
       "name": "RADIS",
-      "path": "../radis"
+      "path": "/workspaces/radis"
     },
     {
       "name": "ADIT Client",
-      "path": "../adit-client"
+      "path": "/workspaces/adit-client"
     },
     {
       "name": "RADIS Client",
-      "path": "../radis-client"
+      "path": "/workspaces/radis-client"
     }
   ]
 }
