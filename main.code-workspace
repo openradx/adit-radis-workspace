@@ -1,30 +1,24 @@
 {
-  // All paths are relative to your main repo
-  // The additional repos are cloned inside /workspace dir
   "folders": [
     {
-      "name": "ADIT RADIS Workspace",
-      "path": "/workspaces/adit-radis-workspace"
-    },
-    {
       "name": "ADIT RADIS Shared",
-      "path": "/workspaces/adit-radis-shared"
+      "path": "projects/adit-radis-shared"
     },
     {
       "name": "ADIT",
-      "path": "/workspaces/adit"
+      "path": "projects/adit"
     },
     {
       "name": "RADIS",
-      "path": "/workspaces/radis"
+      "path": "projects/radis"
     },
     {
       "name": "ADIT Client",
-      "path": "/workspaces/adit-client"
+      "path": "projects/adit-client"
     },
     {
       "name": "RADIS Client",
-      "path": "/workspaces/radis-client"
+      "path": "projects/radis-client"
     }
   ]
 }
