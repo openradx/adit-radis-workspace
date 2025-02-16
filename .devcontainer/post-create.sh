@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Install dependencies in adit-radis-workspace
 uv sync
+uvx typer --install-completion
 
 cd projects
 
@@ -61,5 +61,4 @@ else
     echo "'radis-client' already exists. Skipping."
 fi
 
-# Return to the workspace root
 cd ..
