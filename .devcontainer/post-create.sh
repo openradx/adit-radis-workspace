@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install dependencies in adit-radis-workspace
-poetry install
+uv sync
 
 cd projects
 
@@ -9,9 +9,9 @@ if [ ! -d "adit-radis-shared" ]; then
     echo "Setup 'adit-radis-shared'..."
     git clone https://github.com/openradx/adit-radis-shared
     cd adit-radis-shared
-    poetry install
+    uv sync
     npm install
-    poetry run invoke init-workspace
+    uv run ./cli.py init-workspace
     cd ..
 else
     echo "'adit-radis-shared' already exists. Skipping."
@@ -21,8 +21,8 @@ if [ ! -d "adit" ]; then
     echo "Setup 'adit'..."
     git clone https://github.com/openradx/adit
     cd adit
-    poetry install
-    poetry run invoke init-workspace
+    uv sync install
+    uv run ./cli.py init-workspace
     cd ..
 else
     echo "'adit' already exists. Skipping."
@@ -32,8 +32,8 @@ if [ ! -d "radis" ]; then
     echo "Setup 'radis'..."
     git clone https://github.com/openradx/radis
     cd radis
-    poetry install
-    poetry run invoke init-workspace
+    uv sync
+    uv run ./cli.py init-workspace
     cd ..
 else
     echo "'radis' already exists. Skipping."
@@ -43,7 +43,8 @@ if [ ! -d "adit-client" ]; then
     echo "Setup 'adit-client'..."
     git clone https://github.com/openradx/adit-client
     cd adit-client
-    poetry install
+    uv sync
+    uv run ./cli.py init-workspace
     cd ..
 else
     echo "'adit-client' already exists. Skipping."
@@ -53,7 +54,8 @@ if [ ! -d "radis-client" ]; then
     echo "Setup 'radis-client'..."
     git clone https://github.com/openradx/radis-client
     cd radis-client
-    poetry install
+    uv sync
+    uv run ./cli.py init-workspace
     cd ..
 else
     echo "'radis-client' already exists. Skipping."

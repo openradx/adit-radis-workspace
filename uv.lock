@@ -1,0 +1,8 @@
+version = 1
+revision = 1
+requires-python = ">=3.12, <4.0"
+
+[[package]]
+name = "adit-radis-workspace"
+version = "0.0.0"
+source = { virtual = "." }
