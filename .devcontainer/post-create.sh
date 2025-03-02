@@ -39,26 +39,4 @@ else
     echo "'radis' already exists. Skipping."
 fi
 
-if [ ! -d "adit-client" ]; then
-    echo "Setup 'adit-client'..."
-    git clone https://github.com/openradx/adit-client
-    cd adit-client
-    uv sync
-    uv run ./cli.py init-workspace
-    cd ..
-else
-    echo "'adit-client' already exists. Skipping."
-fi
-
-if [ ! -d "radis-client" ]; then
-    echo "Setup 'radis-client'..."
-    git clone https://github.com/openradx/radis-client
-    cd radis-client
-    uv sync
-    uv run ./cli.py init-workspace
-    cd ..
-else
-    echo "'radis-client' already exists. Skipping."
-fi
-
 cd ..

@@ -11,14 +11,6 @@
     {
       "name": "RADIS",
       "path": "projects/radis"
-    },
-    {
-      "name": "ADIT Client",
-      "path": "projects/adit-client"
-    },
-    {
-      "name": "RADIS Client",
-      "path": "projects/radis-client"
     }
   ]
 }
