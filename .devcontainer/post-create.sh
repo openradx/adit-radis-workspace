@@ -4,34 +4,40 @@ uv sync
 
 cd projects
 
+###
+# ADIT RADIS Shared
+###
+echo "Cloning 'adit-radis-shared'..."
 if [ ! -d "adit-radis-shared" ]; then
-    echo "Setup 'adit-radis-shared'..."
     git clone https://github.com/openradx/adit-radis-shared
-    cd adit-radis-shared
-    bash .devcontainer/post-create.sh
-    cd ..
-else
-    echo "'adit-radis-shared' already exists. Skipping."
-fi
+else echo "'adit-radis-shared' folder already exists. Cloning skipped."; fi
 
+cd adit-radis-shared
+bash .devcontainer/post-create.sh
+cd ..
+
+###
+# ADIT
+###
+echo "Cloning 'adit'..."
 if [ ! -d "adit" ]; then
-    echo "Setup 'adit'..."
     git clone https://github.com/openradx/adit
-    cd adit
-    bash .devcontainer/post-create.sh
-    cd ..
-else
-    echo "'adit' already exists. Skipping."
-fi
+else echo "'adit' folder already exists. Cloning skipped."; fi
 
+cd adit
+bash .devcontainer/post-create.sh
+cd ..
+
+###
+# RADIS
+###
+echo "Cloning 'radis'..."
 if [ ! -d "radis" ]; then
-    echo "Setup 'radis'..."
     git clone https://github.com/openradx/radis
-    cd radis
-    bash .devcontainer/post-create.sh
-    cd ..
-else
-    echo "'radis' already exists. Skipping."
-fi
+else echo "'radis' folder already exists. Cloning skipped."; fi
+
+cd radis
+bash .devcontainer/post-create.sh
+cd ..
 
 cd ..
