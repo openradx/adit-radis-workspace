@@ -1,8 +1,0 @@
-[project]
-name = "adit-radis-workspace"
-description = "A convenient multi repository workspace for the ADIT/RADIS projects"
-authors = [{ name = "Kai Schlamp" }]
-license = "AGPL-3.0-or-later"
-readme = "README.md"
-version = "0.0.0"
-requires-python = ">=3.12,<4.0"
