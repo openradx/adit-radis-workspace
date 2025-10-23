@@ -1,7 +1,8 @@
 # adit-radis-workspace
 
-This repository is adit-radis-workspace, a unified development workspace that brings together three related projects from the OpenRadX organization:
-Purpose
+A unified development workspace that brings together three related projects from the OpenRadX organization:
+
+## Purpose
 
 It provides a centralized development environment for:
 
