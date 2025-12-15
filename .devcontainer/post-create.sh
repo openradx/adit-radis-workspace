@@ -11,7 +11,10 @@ if [ ! -d "adit-radis-shared" ]; then
 else echo "'adit-radis-shared' folder already exists. Cloning skipped."; fi
 
 cd adit-radis-shared
-bash .devcontainer/post-create.sh
+npm install
+uv sync
+uv run cli --install-completion
+uv run cli init-workspace --web-dev-port 8001 --postgres-dev-port 54322 --remote-debugging-port 5679
 cd ..
 
 ###
@@ -23,7 +26,9 @@ if [ ! -d "adit" ]; then
 else echo "'adit' folder already exists. Cloning skipped."; fi
 
 cd adit
-bash .devcontainer/post-create.sh
+uv sync
+uv run cli --install-completion
+uv run cli init-workspace --web-dev-port 8002 --postgres-dev-port 54323 --remote-debugging-port 5680
 cd ..
 
 ###
@@ -35,7 +40,9 @@ if [ ! -d "radis" ]; then
 else echo "'radis' folder already exists. Cloning skipped."; fi
 
 cd radis
-bash .devcontainer/post-create.sh
+uv sync
+uv run cli --install-completion
+uv run cli init-workspace --web-dev-port 8003 --postgres-dev-port 54324 --remote-debugging-port 5681
 cd ..
 
 cd ..
