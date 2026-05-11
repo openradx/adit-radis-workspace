@@ -6,7 +6,8 @@ USER root
 # - gettext for Django translations
 # - postgresql-common for the apt.postgresql.org.sh script
 # - postgresql-client-17 for a current version of psql
-RUN sudo apt-get update \
+RUN rm -f /etc/apt/sources.list.d/yarn.list \
+  && sudo apt-get update \
   && apt-get install -y --no-install-recommends \
   gettext \
   postgresql-common \
