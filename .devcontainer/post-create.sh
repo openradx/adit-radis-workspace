@@ -43,6 +43,7 @@ else echo "'radis' folder already exists. Cloning skipped."; fi
 
 cd radis
 uv sync
+uv run pre-commit install
 uv run cli --install-completion
 uv run cli init-workspace --web-dev-port 8003 --postgres-dev-port 54324 --remote-debugging-port 5681
 cd ..
