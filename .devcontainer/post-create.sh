@@ -13,6 +13,7 @@ else echo "'adit-radis-shared' folder already exists. Cloning skipped."; fi
 cd adit-radis-shared
 npm install
 uv sync
+uv run pre-commit install
 uv run cli --install-completion
 uv run cli init-workspace --web-dev-port 8001 --postgres-dev-port 54322 --remote-debugging-port 5679
 cd ..
