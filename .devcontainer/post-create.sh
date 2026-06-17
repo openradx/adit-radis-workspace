@@ -28,6 +28,7 @@ else echo "'adit' folder already exists. Cloning skipped."; fi
 
 cd adit
 uv sync
+uv run pre-commit install
 uv run cli --install-completion
 uv run cli init-workspace --web-dev-port 8002 --postgres-dev-port 54323 --remote-debugging-port 5680
 cd ..
